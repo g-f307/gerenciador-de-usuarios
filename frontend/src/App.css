@@ -1,21 +1,17 @@
-/* frontend/src/App.css */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-/* Paleta de Cores Neutras */
 :root {
-  --bg-color: #f8f9fa;                   /* Cinza bem claro para o fundo */
-  --surface-color: #ffffff;              /* Branco para as superfícies principais */
-  --border-color: #dee2e6;               /* Cinza claro para bordas */
-  --primary-text-color: #212529;         /* Cinza escuro para o texto principal */
-  --secondary-text-color: #6c757d;       /* Cinza para texto secundário/labels */
+  --bg-color: #f8f9fa;                  
+  --surface-color: #ffffff;              
+  --border-color: #dee2e6;               
+  --primary-text-color: #212529;        
+  --secondary-text-color: #6c757d;      
 
-  /* Cores de Ação */
-  --accent-color: #007bff;               /* Azul primário para botões e links */
-  --accent-color-hover: #0056b3;         /* Azul mais escuro para hover */
-  --danger-color: #dc3545;               /* Vermelho para ações de perigo (excluir) */
-  --danger-color-hover: #c82333;         /* Vermelho mais escuro para hover */
+  --accent-color: #007bff;              
+  --accent-color-hover: #0056b3;         
+  --danger-color: #dc3545;               
+  --danger-color-hover: #c82333;        
 
-  /* Outras variáveis */
   --border-radius: 6px;
   --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
@@ -48,7 +44,6 @@ h1 {
   font-size: 2.2rem;
 }
 
-/* --- Formulário --- */
 .form-container {
   background: #fff;
   padding: 25px;
@@ -111,8 +106,6 @@ button:hover {
 .form-message.success { background-color: #d1e7dd; color: #0f5132; border: 1px solid #badbcc; }
 .form-message.error { background-color: #f8d7da; color: #842029; border: 1px solid #f5c2c7; }
 
-
-/* --- Tabela Responsiva --- */
 .table-container {
   overflow-x: auto;
   border: 1px solid var(--border-color);
@@ -154,13 +147,12 @@ tbody tr:hover {
   width: auto;
   color: white;
 }
-.edit-btn { background-color: #6c757d; } /* Cinza para ação secundária */
+.edit-btn { background-color: #6c757d; } 
 .edit-btn:hover { background-color: #5a6268; }
 .delete-btn { background-color: var(--danger-color); }
 .delete-btn:hover { background-color: var(--danger-color-hover); }
 
 
-/* --- Modal --- */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -200,8 +192,6 @@ tbody tr:hover {
   color: var(--primary-text-color);
 }
 
-
-/* --- Media Queries para Responsividade (mesma lógica de antes) --- */
 @media (max-width: 768px) {
   h1 { font-size: 1.8rem; }
   .container { padding: 15px; }
@@ -235,7 +225,6 @@ tbody tr:hover {
     font-weight: 500;
     color: var(--primary-text-color);
   }
-  /* Rótulos dos dados */
   td:nth-of-type(1):before { content: "ID"; }
   td:nth-of-type(2):before { content: "Nome"; }
   td:nth-of-type(3):before { content: "Email"; }
