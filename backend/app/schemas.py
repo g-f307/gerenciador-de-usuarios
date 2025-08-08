@@ -1,7 +1,6 @@
-# backend/app/schemas.py
 from pydantic import BaseModel, EmailStr, Field
 from datetime import datetime
-from typing import List  # <--- ADICIONE ESTA LINHA
+from typing import List 
 
 class UsuarioBase(BaseModel):
     nome: str = Field(..., min_length=2)
@@ -16,10 +15,7 @@ class Usuario(UsuarioBase):
     created_at: datetime
 
     class Config:
-        from_attributes = True # <--- ATUALIZE ESTA LINHA
-
-# Adicionando os response_models faltantes em schemas.py
-# (Isso é uma melhoria para consistência com o README)
+        from_attributes = True 
 
 class UsuarioListResponse(BaseModel):
     success: bool
