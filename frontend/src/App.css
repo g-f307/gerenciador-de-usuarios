@@ -1,0 +1,245 @@
+/* frontend/src/App.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Paleta de Cores Neutras */
+:root {
+  --bg-color: #f8f9fa;                   /* Cinza bem claro para o fundo */
+  --surface-color: #ffffff;              /* Branco para as superfícies principais */
+  --border-color: #dee2e6;               /* Cinza claro para bordas */
+  --primary-text-color: #212529;         /* Cinza escuro para o texto principal */
+  --secondary-text-color: #6c757d;       /* Cinza para texto secundário/labels */
+
+  /* Cores de Ação */
+  --accent-color: #007bff;               /* Azul primário para botões e links */
+  --accent-color-hover: #0056b3;         /* Azul mais escuro para hover */
+  --danger-color: #dc3545;               /* Vermelho para ações de perigo (excluir) */
+  --danger-color-hover: #c82333;         /* Vermelho mais escuro para hover */
+
+  /* Outras variáveis */
+  --border-radius: 6px;
+  --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--primary-text-color);
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 20px auto;
+  background: var(--surface-color);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+}
+
+h1, h2 {
+  color: var(--primary-text-color);
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+/* --- Formulário --- */
+.form-container {
+  background: #fff;
+  padding: 25px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  margin-bottom: 40px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--secondary-text-color);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  background: var(--surface-color);
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  color: var(--primary-text-color);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+button {
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: var(--accent-color-hover);
+}
+
+.form-message {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+}
+.form-message.success { background-color: #d1e7dd; color: #0f5132; border: 1px solid #badbcc; }
+.form-message.error { background-color: #f8d7da; color: #842029; border: 1px solid #f5c2c7; }
+
+
+/* --- Tabela Responsiva --- */
+.table-container {
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  padding: 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+thead {
+  background-color: #f8f9fa;
+  font-weight: 500;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background-color: #f1f3f5;
+}
+
+.actions-cell {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn, .delete-btn {
+  padding: 6px 12px;
+  font-size: 14px;
+  width: auto;
+  color: white;
+}
+.edit-btn { background-color: #6c757d; } /* Cinza para ação secundária */
+.edit-btn:hover { background-color: #5a6268; }
+.delete-btn { background-color: var(--danger-color); }
+.delete-btn:hover { background-color: var(--danger-color-hover); }
+
+
+/* --- Modal --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: var(--surface-color);
+  padding: 40px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  color: var(--secondary-text-color);
+  font-size: 24px;
+  cursor: pointer;
+  width: auto;
+  line-height: 1;
+}
+.modal-close-btn:hover {
+  color: var(--primary-text-color);
+}
+
+
+/* --- Media Queries para Responsividade (mesma lógica de antes) --- */
+@media (max-width: 768px) {
+  h1 { font-size: 1.8rem; }
+  .container { padding: 15px; }
+
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr { border: 1px solid var(--border-color); margin-bottom: 15px; border-radius: var(--border-radius); }
+  td {
+    border: none;
+    border-bottom: 1px solid #e9ecef;
+    position: relative;
+    padding-left: 50%;
+  }
+  tr td:last-child {
+    border-bottom: none;
+  }
+  td:before {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: 500;
+    color: var(--primary-text-color);
+  }
+  /* Rótulos dos dados */
+  td:nth-of-type(1):before { content: "ID"; }
+  td:nth-of-type(2):before { content: "Nome"; }
+  td:nth-of-type(3):before { content: "Email"; }
+  td:nth-of-type(4):before { content: "Idade"; }
+  td:nth-of-type(5):before { content: "Criação"; }
+  td:nth-of-type(6):before { content: "Ações"; }
+}
