@@ -1,4 +1,3 @@
-// frontend/src/components/UserForm.jsx
 import React, { useState, useEffect } from 'react';
 
 const UserForm = ({ onSubmit, initialData }) => {
