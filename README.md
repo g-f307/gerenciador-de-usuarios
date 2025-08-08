@@ -51,7 +51,7 @@ Uma aplicação web full-stack para realizar operações CRUD (Create, Read, Upd
 ## 📂 ESTRUTURA DO PROJETO
 
 ```
-redmax-challenge/
+gerenciador-de-usuarios/
 ├── backend/
 │   ├── app/
 │   │   ├── __init__.py
